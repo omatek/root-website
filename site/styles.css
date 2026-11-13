@@ -14,7 +14,7 @@
   --muted: #b8b2bb;
   --quiet: #a29ba6;
   --line: #403a43;
-  --art-size: clamp(280px, 39vh, 340px);
+  --art-size: clamp(218.4px, 30.42vh, 265.2px);
   --font: Manrope, "Segoe UI", Arial, sans-serif;
 }
 
@@ -40,7 +40,7 @@ img { display: block; max-width: 100%; height: auto; }
 .site-header nav a:hover { color: var(--cream); }
 .site-header .arrow { width: 15px; height: 15px; color: var(--coral); }
 
-main.wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; padding-block: 14px 24px; }
+main.wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 38px; padding-block: 8px 32px; }
 main:focus { outline: none; }
 .introduction { display: grid; grid-template-columns: 1.25fr 1fr; align-items: start; gap: 80px; }
 .introduction h1 { font-size: clamp(40px, 3.8vw, 52px); font-weight: 500; line-height: 1.14; letter-spacing: -.06em; }
@@ -48,16 +48,16 @@ main:focus { outline: none; }
 .community-copy { max-width: 440px; padding-top: 3px; font-size: 14px; line-height: 1.75; color: var(--muted); }
 .community-copy p + p { margin-top: 12px; font-size: 12px; color: var(--quiet); }
 
-.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 72px; max-width: 920px; list-style: none; padding: 0; margin: 0 auto; }
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 64px; max-width: 800px; list-style: none; padding: 0; margin: 0 auto; }
 .project { display: flex; flex-direction: column; align-items: center; text-align: center; }
 /* The complete approved SVG is the surface. There is no surrounding card,
    background replacement, path reconstruction, mask, or logo filter. */
-.project-art { width: var(--art-size); max-width: 100%; aspect-ratio: 1; position: relative; isolation: isolate; border-radius: 27px; box-shadow: 0 1px 1px rgb(9 6 12 / .3), 0 12px 25px rgb(9 6 12 / .17); transition: transform 220ms ease, box-shadow 220ms ease; }
+.project-art { width: var(--art-size); max-width: 100%; aspect-ratio: 1; position: relative; isolation: isolate; border-radius: 21px; box-shadow: 0 1px 1px rgb(9 6 12 / .3), 0 12px 25px rgb(9 6 12 / .17); transition: transform 220ms ease, box-shadow 220ms ease; }
 .project-art img { width: 100%; height: 100%; border-radius: inherit; }
 .project-art::after { content: ""; position: absolute; inset: 0; pointer-events: none; border-radius: inherit; border: 1px solid rgb(247 248 242 / .08); border-top-color: rgb(255 255 255 / .36); border-left-color: rgb(255 255 255 / .19); box-shadow: inset 0 1px 2px rgb(255 255 255 / .25), inset 0 -1px 2px rgb(20 15 24 / .16); transition: border-color 220ms ease, box-shadow 220ms ease; }
 .project-upcoming .project-art { box-shadow: 0 1px 1px rgb(9 6 12 / .2), 0 10px 22px rgb(9 6 12 / .12); }
 .project-upcoming .project-art::after { border-color: rgb(247 248 242 / .07); border-top-color: rgb(247 248 242 / .17); border-left-color: rgb(247 248 242 / .11); box-shadow: inset 0 1px 2px rgb(247 248 242 / .1), inset 0 -1px 2px rgb(9 6 12 / .2); }
-.project-details { margin-top: 20px; }
+.project-details { margin-top: 16px; }
 .project-details h3 { display: flex; justify-content: center; align-items: center; gap: 10px; font-size: 23px; font-weight: 500; line-height: 1.4; letter-spacing: -.035em; }
 .project-details .arrow { color: var(--coral); transition: transform 220ms ease; }
 .project-details > p:not(.project-status) { margin-top: 4px; color: var(--muted); font-size: 14px; line-height: 1.6; }
@@ -89,7 +89,7 @@ main:focus { outline: none; }
   .introduction h1 { font-size: 39px; }
   .community-copy { font-size: 13px; }
   .project-grid { gap: 40px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); }
-  .project-art { width: min(var(--art-size), 285px); }
+  .project-art { width: min(var(--art-size), 222.3px); }
   .site-footer { flex-wrap: wrap; gap: 4px 24px; }
 }
 
@@ -100,14 +100,14 @@ main:focus { outline: none; }
   .site-header nav { gap: 19px; }
   .site-header nav a { font-size: 12px; gap: 5px; }
   .site-header .arrow { width: 13px; height: 13px; }
-  main.wrap { padding-block: 20px 34px; gap: 30px; }
+  main.wrap { padding-block: 20px 28px; gap: 26px; }
   .introduction { grid-template-columns: 1fr; gap: 18px; }
   .introduction h1 { font-size: clamp(31px, 8.7vw, 42px); line-height: 1.15; letter-spacing: -.055em; }
   .community-copy { max-width: 390px; padding-top: 0; font-size: 14px; line-height: 1.75; }
   .community-copy p + p { margin-top: 10px; font-size: 12px; }
-  .project-grid { grid-template-columns: 1fr; gap: 36px; }
-  .project-art { width: 270px; border-radius: 24px; }
-  .project-details { margin-top: 17px; }
+  .project-grid { grid-template-columns: 1fr; gap: 30px; }
+  .project-art { width: 210.6px; border-radius: 19px; }
+  .project-details { margin-top: 14px; }
   .project-details h3 { font-size: 23px; }
   .project-status { font-size: 12px; }
   .site-footer { padding-block: 8px 20px; display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; }

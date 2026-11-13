@@ -1,4 +1,19 @@
-# Design revision validation — 2026-11-13
+# Design revision validation — 2026-11-14
+
+## Targeted size correction and pending brand asset
+
+Project artwork is uniformly 22% smaller than the preceding revision at all
+five tested widths. Grid width, introduction spacing, artwork-to-caption gaps,
+and mobile/footer spacing were adjusted without changing content or behavior.
+Desktop and mobile screenshots were visually inspected again; all automated
+browser checks pass and axe reports zero violations.
+
+The requested `root-barlow-lockup-dark-transparent.svg` is missing after a
+workspace search. The new upload is `root-barlow-lockup-dark.svg`, which has
+the intended bold outlined Barlow wordmark and a solid plum background. Its
+reference rendering was inspected. It has not been substituted: use of that
+exact opaque asset is awaiting the user's answer. Screenshots currently retain
+the previous thin wordmark, which remains an unresolved branding issue.
 
 ## Rendered result
 
@@ -10,11 +25,11 @@ perspective transform is used on the logo images.
 
 | Viewport | Document size | Logo surface | Result |
 | --- | --- | --- | --- |
-| Desktop 1440 × 900 | 1440 × 900 | 340 × 340 each | Fits one viewport |
-| Laptop 1366 × 768 | 1366 × 768 | About 300 × 300 each | Fits one viewport |
-| Mobile 390 × 844 | 390 × 1243 | 270 × 270 each | Natural vertical scroll |
-| Tablet 768 × 1024 | 768 × 1024 | 285 × 285 each | No horizontal overflow |
-| Narrow mobile 320 × 740 | 320 × 1282 | 270 × 270 each | No horizontal overflow |
+| Desktop 1440 × 900 | 1440 × 900 | About 265 × 265 each | Fits one viewport |
+| Laptop 1366 × 768 | 1366 × 768 | About 234 × 234 each | Fits one viewport |
+| Mobile 390 × 844 | 390 × 1103 | About 211 × 211 each | Natural vertical scroll |
+| Tablet 768 × 1024 | 768 × 1024 | About 222 × 222 each | No horizontal overflow |
+| Narrow mobile 320 × 740 | 320 × 1141 | About 211 × 211 each | No horizontal overflow |
 
 All three requested screenshots were inspected. The first revision's laptop
 capture exposed a 15px vertical overflow. The visual correction pass shortened
@@ -22,7 +37,7 @@ the supporting copy and tightened the main/footer spacing, while increasing
 the laptop artwork from about 292px to 300px. A second rendered inspection
 confirmed that the full laptop page fits naturally, without a fixed page height
 or overflow clipping. The desktop screenshot also fits naturally. Mobile keeps
-large artwork and stacks the projects.
+prominent artwork and stacks the projects.
 
 - [Desktop — 1440 × 900](screenshots/desktop-1440x900.png)
 - [Laptop — 1366 × 768](screenshots/laptop-1366x768.png)
@@ -90,8 +105,8 @@ against plum-black.
 
 ## Limits and deployment boundary
 
-No unresolved branding or rendering issue was observed in the tested Chromium
-renders. Firefox, Safari, screen-reader operation, remote service availability,
+The header asset issue described above remains unresolved. No other rendering
+issue was observed in the tested Chromium renders. Firefox, Safari, screen-reader operation, remote service availability,
 and Cloudflare's deployed response behavior were not tested. Axe and keyboard
 checks do not replace a full assistive-technology audit.
 

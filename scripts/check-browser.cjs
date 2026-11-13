@@ -91,7 +91,7 @@ async function main() {
       for (const [index, selector] of ['.project-archive img', '.project-upcoming img'].entries()) {
         const locator = page.locator(selector);
         const box = await locator.boundingBox();
-        assert(box.width >= 260 && Math.abs(box.width - box.height) < .01, `${name}: project artwork size/proportions`);
+        assert(box.width >= 200 && box.width <= 266 && Math.abs(box.width - box.height) < .01, `${name}: project artwork size/proportions`);
         assert(await locator.evaluate(img => img.complete && img.naturalWidth > 0 && getComputedStyle(img).clipPath === 'none' && getComputedStyle(img).filter === 'none'));
         const ink = colorFraction(png, box, index === 0 ? [152, 47, 34] : [226, 228, 232]);
         const background = colorFraction(png, box, index === 0 ? [233, 237, 227] : [37, 39, 43]);

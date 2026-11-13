@@ -14,16 +14,16 @@
       },
       "projectPixels": [
         {
-          "width": 340,
-          "height": 340,
-          "inkFraction": 0.03756723928509457,
-          "backgroundFraction": 0.932318237029325
+          "width": 265.1875,
+          "height": 265.1875,
+          "inkFraction": 0.03710399449035812,
+          "backgroundFraction": 0.9335973370064279
         },
         {
-          "width": 340,
-          "height": 340,
-          "inkFraction": 0.03756723928509457,
-          "backgroundFraction": 0.9324744056914801
+          "width": 265.1875,
+          "height": 265.1875,
+          "inkFraction": 0.03710399449035812,
+          "backgroundFraction": 0.9370121671258035
         }
       ],
       "axeViolations": 0,
@@ -42,16 +42,16 @@
       },
       "projectPixels": [
         {
-          "width": 299.515625,
-          "height": 299.515625,
-          "inkFraction": 0.03789243727760011,
-          "backgroundFraction": 0.9341133282284582
+          "width": 233.625,
+          "height": 233.625,
+          "inkFraction": 0.036470719381688464,
+          "backgroundFraction": 0.9292694708680143
         },
         {
-          "width": 299.515625,
-          "height": 299.515625,
-          "inkFraction": 0.03789243727760011,
-          "backgroundFraction": 0.9370636457817215
+          "width": 233.625,
+          "height": 233.625,
+          "inkFraction": 0.036470719381688464,
+          "backgroundFraction": 0.9330967598097503
         }
       ],
       "axeViolations": 0,
@@ -66,20 +66,20 @@
       },
       "document": {
         "width": 390,
-        "height": 1243
+        "height": 1103
       },
       "projectPixels": [
         {
-          "width": 270,
-          "height": 270,
-          "inkFraction": 0.03672036348616274,
-          "backgroundFraction": 0.9254991050530084
+          "width": 210.59375,
+          "height": 210.59375,
+          "inkFraction": 0.03621315192743764,
+          "backgroundFraction": 0.9161451247165533
         },
         {
-          "width": 270,
-          "height": 270,
-          "inkFraction": 0.036734131901418145,
-          "backgroundFraction": 0.9257193996970948
+          "width": 210.59375,
+          "height": 210.59375,
+          "inkFraction": 0.036258503401360546,
+          "backgroundFraction": 0.9128571428571428
         }
       ],
       "axeViolations": 0,
@@ -98,16 +98,16 @@
       },
       "projectPixels": [
         {
-          "width": 285,
-          "height": 285,
-          "inkFraction": 0.03700902598690736,
-          "backgroundFraction": 0.926329101368776
+          "width": 222.296875,
+          "height": 222.296875,
+          "inkFraction": 0.036525212995801234,
+          "backgroundFraction": 0.9223635400105988
         },
         {
-          "width": 285,
-          "height": 285,
-          "inkFraction": 0.03702142432057132,
-          "backgroundFraction": 0.929403888117437
+          "width": 222.296875,
+          "height": 222.296875,
+          "inkFraction": 0.036525212995801234,
+          "backgroundFraction": 0.9189393012922424
         }
       ],
       "axeViolations": 0,
@@ -122,20 +122,20 @@
       },
       "document": {
         "width": 320,
-        "height": 1282
+        "height": 1141
       },
       "projectPixels": [
         {
-          "width": 270,
-          "height": 270,
-          "inkFraction": 0.03676166873192895,
-          "backgroundFraction": 0.9285006195786865
+          "width": 210.59375,
+          "height": 210.59375,
+          "inkFraction": 0.03677375256322625,
+          "backgroundFraction": 0.922282980177717
         },
         {
-          "width": 270,
-          "height": 270,
-          "inkFraction": 0.036734131901418145,
-          "backgroundFraction": 0.925691862866584
+          "width": 210.59375,
+          "height": 210.59375,
+          "inkFraction": 0.03659863945578231,
+          "backgroundFraction": 0.9182993197278911
         }
       ],
       "axeViolations": 0,
