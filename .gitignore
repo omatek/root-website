@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+.env
+.env.*
+!.env.example
+.wrangler/
+test-results/
+playwright-report/
+.openai/
+__pycache__/
+*.pyc

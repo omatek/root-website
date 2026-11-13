@@ -1,0 +1,126 @@
+{
+  "browser": "151.0.7922.34",
+  "axe": "4.14.0",
+  "viewports": [
+    {
+      "name": "desktop-1440x900",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "projectPixels": [
+        {
+          "width": 244,
+          "height": 244,
+          "inkFraction": 0.03572151386359037,
+          "backgroundFraction": 0.9223504014032248
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    },
+    {
+      "name": "laptop-1366x768",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "document": {
+        "width": 1366,
+        "height": 768
+      },
+      "projectPixels": [
+        {
+          "width": 244,
+          "height": 244,
+          "inkFraction": 0.03570464818187951,
+          "backgroundFraction": 0.922316670039803
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    },
+    {
+      "name": "mobile-390x844",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 844
+      },
+      "projectPixels": [
+        {
+          "width": 200,
+          "height": 200,
+          "inkFraction": 0.03738693467336683,
+          "backgroundFraction": 0.9154020100502512
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    },
+    {
+      "name": "tablet-768x1024",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "document": {
+        "width": 768,
+        "height": 1024
+      },
+      "projectPixels": [
+        {
+          "width": 215.03125,
+          "height": 215.03125,
+          "inkFraction": 0.034829637641968635,
+          "backgroundFraction": 0.9166684694429421
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    },
+    {
+      "name": "narrow-320x740",
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "document": {
+        "width": 320,
+        "height": 775
+      },
+      "projectPixels": [
+        {
+          "width": 200,
+          "height": 200,
+          "inkFraction": 0.03738693467336683,
+          "backgroundFraction": 0.9154020100502512
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    }
+  ],
+  "keyboard": "pass",
+  "reducedMotion": "pass",
+  "archiveNavigation": "pass (intercepted test response)",
+  "custom404": "pass",
+  "approvedAssetHashes": {
+    "root-barlow-lockup-dark-transparent.svg": "d69d588a6d99d299634680b74aff1ed1294a4fcd1a423ba812d442d4980d6e01",
+    "root-archive.svg": "f19b8443313a707f05125438cb0425d021cea5992b50d5196f4dab198b80f4f2",
+    "root-competitions.svg": "7499c9db9d3c96a78cb58d2f11a92d27fa5cc5d4a29707c7de4aca6a6799ec13",
+    "root.svg": "e9ae1f50351aad17c8a34743d0372ed02ea2228e5f11e9da6971ffe0c7cc97f8"
+  }
+}
