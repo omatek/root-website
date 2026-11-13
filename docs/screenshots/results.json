@@ -1,0 +1,156 @@
+{
+  "browser": "156.0.8078.79",
+  "axe": "4.14.0",
+  "viewports": [
+    {
+      "name": "desktop-1440x900",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "width": 1440,
+        "height": 900
+      },
+      "projectPixels": [
+        {
+          "width": 340,
+          "height": 340,
+          "inkFraction": 0.03756723928509457,
+          "backgroundFraction": 0.932318237029325
+        },
+        {
+          "width": 340,
+          "height": 340,
+          "inkFraction": 0.03756723928509457,
+          "backgroundFraction": 0.9324744056914801
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    },
+    {
+      "name": "laptop-1366x768",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "document": {
+        "width": 1366,
+        "height": 768
+      },
+      "projectPixels": [
+        {
+          "width": 299.515625,
+          "height": 299.515625,
+          "inkFraction": 0.03789243727760011,
+          "backgroundFraction": 0.9341133282284582
+        },
+        {
+          "width": 299.515625,
+          "height": 299.515625,
+          "inkFraction": 0.03789243727760011,
+          "backgroundFraction": 0.9370636457817215
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    },
+    {
+      "name": "mobile-390x844",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1243
+      },
+      "projectPixels": [
+        {
+          "width": 270,
+          "height": 270,
+          "inkFraction": 0.03672036348616274,
+          "backgroundFraction": 0.9254991050530084
+        },
+        {
+          "width": 270,
+          "height": 270,
+          "inkFraction": 0.036734131901418145,
+          "backgroundFraction": 0.9257193996970948
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    },
+    {
+      "name": "tablet-768x1024",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "document": {
+        "width": 768,
+        "height": 1024
+      },
+      "projectPixels": [
+        {
+          "width": 285,
+          "height": 285,
+          "inkFraction": 0.03700902598690736,
+          "backgroundFraction": 0.926329101368776
+        },
+        {
+          "width": 285,
+          "height": 285,
+          "inkFraction": 0.03702142432057132,
+          "backgroundFraction": 0.929403888117437
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    },
+    {
+      "name": "narrow-320x740",
+      "viewport": {
+        "width": 320,
+        "height": 740
+      },
+      "document": {
+        "width": 320,
+        "height": 1282
+      },
+      "projectPixels": [
+        {
+          "width": 270,
+          "height": 270,
+          "inkFraction": 0.03676166873192895,
+          "backgroundFraction": 0.9285006195786865
+        },
+        {
+          "width": 270,
+          "height": 270,
+          "inkFraction": 0.036734131901418145,
+          "backgroundFraction": 0.925691862866584
+        }
+      ],
+      "axeViolations": 0,
+      "consoleErrors": 0,
+      "externalRequests": 0
+    }
+  ],
+  "keyboard": "pass",
+  "reducedMotion": "pass",
+  "archiveNavigation": "pass (intercepted test response)",
+  "custom404": "pass",
+  "approvedAssetHashes": {
+    "root-lockup-dark-transparent.svg": "412f76c2d80a5c61c9ad3fb3791261d4296800bf0f3324403a825bdb4ebee458",
+    "root-archive.svg": "f19b8443313a707f05125438cb0425d021cea5992b50d5196f4dab198b80f4f2",
+    "root-competitions.svg": "7499c9db9d3c96a78cb58d2f11a92d27fa5cc5d4a29707c7de4aca6a6799ec13",
+    "root.svg": "e9ae1f50351aad17c8a34743d0372ed02ea2228e5f11e9da6971ffe0c7cc97f8"
+  }
+}

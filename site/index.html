@@ -32,48 +32,29 @@
     </a>
     <nav aria-label="Main navigation">
       <a href="#explore">Explore</a>
-      <a href="#about">About</a>
-      <a href="#connect">Connect <span class="nav-arrow" aria-hidden="true">↗</span></a>
+      <a href="#connect">Connect <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 15 10-10M5 5h10v10"/></svg></a>
     </nav>
   </header>
 
-  <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <p class="eyebrow"><span class="identity-dot" aria-hidden="true"></span> Independent. Student-led. Jordan.</p>
+  <main id="main" class="wrap" tabindex="-1">
+    <section class="introduction" aria-labelledby="hero-title">
       <h1 id="hero-title">Beyond consuming.<br><span>Start creating.</span></h1>
-      <p class="hero-description">A technology community built around curiosity,<br class="desktop-break"> initiative, and learning by doing.</p>
-      <a class="hero-link" href="#explore">Find your starting point <span aria-hidden="true">↓</span></a>
+      <div class="community-copy" id="about">
+        <p>We’re root. An independent, student-led technology community in Jordan. We explore how things work, turn ideas into projects, and learn by doing—together.</p>
+        <p>Cybersecurity, computer science, AI, programming.</p>
+      </div>
     </section>
 
-    <!-- This clip follows the approved mark exactly. It removes only the source
-         assets' rectangular backgrounds; the source SVG files are unmodified. -->
-    <svg class="svg-definitions" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false">
-      <defs>
-        <clipPath id="project-mark-clip" clipPathUnits="objectBoundingBox">
-          <g transform="scale(0.00625) translate(32 47.75)">
-            <path d="M13 0h5.4L6.4 55H1z M33 0h5.4l-12 55H21z M3 16h41v5H3z M0 33h41v5H0z"/>
-            <rect x="50" y="61" width="46" height="3.5"/>
-          </g>
-        </clipPath>
-      </defs>
-    </svg>
-
-    <section class="explore wrap" id="explore" aria-labelledby="explore-title">
-      <div class="section-heading">
-        <h2 id="explore-title"><span class="section-index" aria-hidden="true">01 /</span> Explore root</h2>
-        <p>Our ideas, taking shape.</p>
-      </div>
-
+    <section class="explore" id="explore" aria-labelledby="explore-title">
+      <h2 class="visually-hidden" id="explore-title">Explore root</h2>
       <ul class="project-grid" aria-label="root projects">
         <li>
           <a class="project project-archive" href="https://archive.rootamman.com" aria-labelledby="archive-name" aria-describedby="archive-description archive-status">
             <div class="project-art" aria-hidden="true">
-              <div class="project-mark">
-                <img src="assets/brand/root-archive.svg" width="2048" height="2048" alt="">
-              </div>
+              <img src="assets/brand/root-archive.svg" width="2048" height="2048" alt="">
             </div>
             <div class="project-details">
-              <h3 id="archive-name">root<span class="project-slash">/</span>archive <span class="project-arrow" aria-hidden="true">↗</span></h3>
+              <h3 id="archive-name">root/archive <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 15 10-10M5 5h10v10"/></svg></h3>
               <p id="archive-description">Academic resources.</p>
               <p class="project-status" id="archive-status">Preparing for public launch</p>
             </div>
@@ -82,12 +63,10 @@
         <li>
           <article class="project project-upcoming" aria-labelledby="competitions-name" aria-describedby="competitions-description competitions-status">
             <div class="project-art" aria-hidden="true">
-              <div class="project-mark">
-                <img src="assets/brand/root-competitions.svg" width="2048" height="2048" alt="">
-              </div>
+              <img src="assets/brand/root-competitions.svg" width="2048" height="2048" alt="">
             </div>
             <div class="project-details">
-              <h3 id="competitions-name">root<span class="project-slash">/</span>competitions</h3>
+              <h3 id="competitions-name">root/competitions</h3>
               <p id="competitions-description">Challenges &amp; CTFs.</p>
               <p class="project-status" id="competitions-status"><span class="status-dot" aria-hidden="true"></span> Coming soon</p>
             </div>
@@ -95,35 +74,12 @@
         </li>
       </ul>
     </section>
-
-    <section class="about wrap" id="about" aria-labelledby="about-title">
-      <h2 class="section-label" id="about-title"><span class="section-index" aria-hidden="true">02 /</span> Why root exists</h2>
-      <div class="about-content">
-        <p class="about-statement">Curiosity is a starting point.<br>See where it takes you.</p>
-        <div class="about-copy">
-          <p>There’s a lot to learn by trying. By building something small, taking it apart, asking a better question, or working through a problem together.</p>
-          <p>root is a place for that kind of learning. We’re an independent, student-led community in Jordan, exploring cybersecurity, computer science, AI, programming, and whatever makes us curious next.</p>
-          <p>Bring an idea. Take initiative. Make something of it.</p>
-        </div>
-      </div>
-    </section>
   </main>
 
   <footer class="site-footer wrap" id="connect">
-    <div class="footer-top">
-      <div>
-        <p class="footer-invitation">Good things start with a conversation.</p>
-        <p class="footer-description">Find us on LinkedIn.</p>
-      </div>
-      <a class="connect-link" href="https://www.linkedin.com/company/rootamman/">Let’s connect <span aria-hidden="true">↗</span><span class="visually-hidden"> on LinkedIn</span></a>
-    </div>
-    <div class="footer-bottom">
-      <a class="brand footer-brand" href="#top" aria-label="root — back to top">
-        <img src="assets/brand/root-lockup-dark-transparent.svg" width="592" height="217" alt="root" loading="lazy">
-      </a>
-      <p>Independent. Student-led. Based in Jordan.</p>
-      <p class="copyright">© 2026 root</p>
-    </div>
+    <p>Independent. Student-led. Based in Jordan.</p>
+    <a class="connect-link" href="https://www.linkedin.com/company/rootamman/">Find us on LinkedIn <svg class="arrow" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="m5 15 10-10M5 5h10v10"/></svg></a>
+    <p class="copyright">© 2026 root</p>
   </footer>
 </body>
 </html>

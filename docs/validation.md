@@ -1,79 +1,100 @@
-# Validation — 2026-11-13
+# Design revision validation — 2026-11-13
 
-## Passed
+## Rendered result
 
-- Both HTML documents parse in strict HTML5 mode with html5lib 1.1.
-- The stylesheet and all media-query declarations parse without errors using
-  tinycss2 1.5.1. SVGs and the sitemap parse as XML.
-- Local image, font, stylesheet, page, and fragment references resolve. IDs are
-  unique, and the homepage contains one `h1`.
-- All seven deployed brand SVGs match the user-supplied originals byte for
-  byte. The shared CSS clipping contour matches both project marks' original
-  path, underscore dimensions, and translation exactly. The uniform crop
-  preserves the symbol's 96:64.5 proportions.
-- Exactly two projects appear. The entire archive element is an anchor to the
-  supplied HTTPS destination, with an explicit public-launch preparation note.
-  Competitions is a noninteractive article with “Coming soon,” no anchor, no
-  button/link role, and no tab stop.
-- The only external links are the supplied archive and LinkedIn destinations.
-  All in-page navigation targets exist. This confirms URL accuracy in source,
-  not remote service availability.
-- Text contrast against plum-black: cream **14.64:1**, coral **6.38:1**, muted
-  text **7.54:1**, quiet text **5.79:1**, and upcoming project text **8.94:1**.
-  The decorative project symbols retain their approved colors.
-- Font metrics confirm that both hero lines fit their available width at
-  320, 360, 375, 390, 600, 768, 1024, 1440, and 1920 pixels. At 320px, the wider
-  line measures about 272px inside a 280px content area. This is a source/font
-  check, not a rendered responsive-layout test.
-- The 1200 × 630 Open Graph PNG decodes correctly, has an opaque plum-black
-  background, and was visually inspected. The original wordmark is rasterized
-  proportionally from the approved SVG; typography uses the self-hosted font.
-- `python3 scripts/render-social.py` succeeds. Its code passes
-  `python3 -m py_compile scripts/render-social.py`.
-- `git diff --check` passes. The complete deployable `site/` directory is
-  approximately 129 KB, including unused alternate wordmarks and the social
-  PNG. The homepage has no JavaScript and uses a single 24.8 KB font file.
+The compact homepage was rendered in Chromium using an isolated localhost
+server with the site's actual Content Security Policy and response headers.
+The complete approved SVGs render directly, including their original background
+colors. No mask, clip path, reconstructed brand path, opacity change, or
+perspective transform is used on the logo images.
 
-## Accessibility and interaction source review
+| Viewport | Document size | Logo surface | Result |
+| --- | --- | --- | --- |
+| Desktop 1440 × 900 | 1440 × 900 | 340 × 340 each | Fits one viewport |
+| Laptop 1366 × 768 | 1366 × 768 | About 300 × 300 each | Fits one viewport |
+| Mobile 390 × 844 | 390 × 1243 | 270 × 270 each | Natural vertical scroll |
+| Tablet 768 × 1024 | 768 × 1024 | 285 × 285 each | No horizontal overflow |
+| Narrow mobile 320 × 740 | 320 × 1282 | 270 × 270 each | No horizontal overflow |
 
-Semantic header, named navigation, main, sections, project list, and footer are
-present. A visible-on-focus skip link leads to main content. All links receive
-a coral `:focus-visible` outline. Project focus uses the same restrained lift
-as hover. Decorative marks/arrows are hidden from assistive technology, and
-project names, descriptions, and statuses provide accessible text.
+All three requested screenshots were inspected. The first revision's laptop
+capture exposed a 15px vertical overflow. The visual correction pass shortened
+the supporting copy and tightened the main/footer spacing, while increasing
+the laptop artwork from about 292px to 300px. A second rendered inspection
+confirmed that the full laptop page fits naturally, without a fixed page height
+or overflow clipping. The desktop screenshot also fits naturally. Mobile keeps
+large artwork and stacks the projects.
 
-`prefers-reduced-motion: reduce` removes smooth scrolling, transitions, and
-hover/focus translations. Upcoming content has no pointer interaction or hover
-lift. The grid automatically wraps additional items, becomes one column on
-small phones, and does not rely on scripting.
+- [Desktop — 1440 × 900](screenshots/desktop-1440x900.png)
+- [Laptop — 1366 × 768](screenshots/laptop-1366x768.png)
+- [Mobile — 390 × 844, full page](screenshots/mobile-390x844.png)
+- [Machine-readable measurements](screenshots/results.json)
 
-## Browser verification limit
+## Branding
 
-The supported managed preview could not provide a browser route:
+The visible parent brand is `site/assets/brand/root-lockup-dark-transparent.svg`.
+The two launcher identities are `root-archive.svg` and `root-competitions.svg`.
+The favicon is `root.svg`. Each matches its corresponding user-supplied original
+byte for byte. The unused light/dark lockup alternatives also remain unchanged.
+SHA-256 fingerprints for the four used assets are enforced by the browser check.
 
-```text
-sites-preview start /workspace/root-website
-sites-preview: relay could not open browser port 4173:
-timed out waiting for relay readiness
+The standalone square logo artwork supplies its own approved surface. Only
+that surface receives rounded background corners, a thin perimeter highlight,
+and a shallow shadow. The project text is outside the artwork; no card or
+bordered panel surrounds the full project element. Competitions retains its
+original colors and uses a quieter perimeter treatment.
+
+## Automated browser checks
+
+Run from the repository root with the optional development tools available:
+
+```sh
+NODE_PATH=/tmp/root-qa-node/node_modules:/opt/codex/runtimes/codex-primary-runtime/dependencies/node/node_modules node scripts/check-browser.cjs
 ```
 
-The shared browser also rejects local `file:` URLs. That restriction was not
-bypassed. Consequently, desktop/tablet/mobile rendered layout, real keyboard
-navigation, actual hover/focus rendering, clipped-logo rendering, browser
-console/network behavior, and cross-browser behavior remain **unverified**.
-The social-image inspection does not establish homepage visual correctness.
+The README gives a portable installation command. None of these tools is a
+site runtime or Cloudflare build dependency.
 
-Before approving production, inspect a local or approved branch preview at
-1440px, 768px, 390px, and 320px. Check the two-logo balance, in-page links, Tab
-order and skip link, archive hover/focus, noninteractive competitions state,
-reduced-motion preference, and absence of horizontal overflow. Also verify
-archive's current remote availability and test the custom 404 and `_headers`
-on a Pages preview.
+Passed at all five widths:
 
-## Deployment boundary
+- Both logo images load at their original square proportions and remain large.
+- Actual screenshot pixels contain the expected oxide/ivory and silver/graphite
+  artwork. This catches the previous failure where the files loaded but the
+  CSS treatment hid all artwork. Both symbols occupy approximately 4% of their
+  approved square surfaces; original backgrounds remain visible.
+- Desktop document heights equal the viewport heights. No horizontal overflow
+  occurs at any tested size.
+- Header SVG retains its exact original 592:217 proportions.
+- The self-hosted Manrope font loads, all assets return successfully, there are
+  no browser console/page errors, and page loading makes no third-party requests.
+- Axe WCAG 2 A/AA, 2.1 AA, and 2.2 AA checks report **zero violations**.
 
-`site/` is the complete Cloudflare Pages build output. No build process,
-package installation, environment variables, Workers, or external services are
-required. The setup recipe is in the README. This work does not create a
-Cloudflare project, modify domain/DNS configuration, deploy a live site, or
-claim production verification.
+Additional browser checks passed:
+
+- Tab order: skip link, parent logo, Explore, Connect, archive, LinkedIn.
+- Every tab stop has a visible focus outline; the skip link focuses `main`.
+- Archive responds to hover/focus with a restrained 2px lift.
+- Competitions has no link/button role or tab stop and does not lift on hover.
+- Reduced-motion preference disables translations, transitions, and smooth scroll.
+- Clicking the archive artwork navigates to its exact supplied URL. The
+  response was intercepted locally; this does not verify remote availability.
+- Unknown paths return the custom 404 document in the test server.
+
+## Source checks
+
+Strict HTML5 parsing of both pages passed with html5lib 1.1. CSS and media-query
+syntax passed with tinycss2 1.5.1. SVGs and the sitemap parse as XML. All local
+file and fragment references resolve, IDs are unique, and every brand file
+matches the original attachment. `node --check scripts/check-browser.cjs` and
+`git diff --check` pass. Body text palette contrast remains at least 5.79:1
+against plum-black.
+
+## Limits and deployment boundary
+
+No unresolved branding or rendering issue was observed in the tested Chromium
+renders. Firefox, Safari, screen-reader operation, remote service availability,
+and Cloudflare's deployed response behavior were not tested. Axe and keyboard
+checks do not replace a full assistive-technology audit.
+
+The deployable output remains the buildless `site/` directory. This revision
+changes no Cloudflare project, production deployment, DNS, domain configuration,
+or merge state. The existing feature branch and PR are used for review.
