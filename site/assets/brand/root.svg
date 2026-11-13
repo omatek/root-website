@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2048" height="2048" viewBox="0 0 160 160" role="img" aria-labelledby="title">
+  <title id="title">root logo</title>
+  <rect width="160" height="160" fill="#262229"/>
+  <g transform="translate(32 47.75)">
+    <path d="M13 0h5.4L6.4 55H1z M33 0h5.4l-12 55H21z M3 16h41v5H3z M0 33h41v5H0z" fill="#F7F8F2"/>
+    <rect x="50" y="61" width="46" height="3.5" fill="#EE8B73"/>
+  </g>
+</svg>
