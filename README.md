@@ -63,7 +63,7 @@ year in the HTML when needed.
 
 ## Brand provenance
 
-The five main root SVGs and the two project SVGs are the supplied attachments,
+The root lockups, parent symbol, and two project SVGs are supplied attachments,
 preserved byte for byte. Only archive and competitions appear in the launcher.
 
 Archive uses the approved `#982F22` mark on `#E9EDE3`; competitions uses
@@ -75,7 +75,7 @@ surface corners and adds a restrained perimeter highlight and shallow shadow.
 Names, descriptions, and statuses sit beneath the artwork, outside its surface.
 Competitions has a quieter perimeter treatment and an explicit upcoming status.
 
-The header uses `root-lockup-dark-transparent.svg`; the launcher uses
+The header uses `root-barlow-lockup-dark-transparent.svg`; the launcher uses
 `root-archive.svg` and `root-competitions.svg`; the favicon uses `root.svg`.
 SHA-256 fingerprints of these approved files are recorded in the browser check.
 

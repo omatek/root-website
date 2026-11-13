@@ -20,7 +20,7 @@ const viewports = [
   ['narrow-320x740', 320, 740, false],
 ];
 const approved = {
-  'root-lockup-dark-transparent.svg': '412f76c2d80a5c61c9ad3fb3791261d4296800bf0f3324403a825bdb4ebee458',
+  'root-barlow-lockup-dark-transparent.svg': 'd69d588a6d99d299634680b74aff1ed1294a4fcd1a423ba812d442d4980d6e01',
   'root-archive.svg': 'f19b8443313a707f05125438cb0425d021cea5992b50d5196f4dab198b80f4f2',
   'root-competitions.svg': '7499c9db9d3c96a78cb58d2f11a92d27fa5cc5d4a29707c7de4aca6a6799ec13',
   'root.svg': 'e9ae1f50351aad17c8a34743d0372ed02ea2228e5f11e9da6971ffe0c7cc97f8',
@@ -82,7 +82,7 @@ async function main() {
       assert(await page.evaluate(() => document.fonts.check('500 16px Manrope')));
       assert(await page.locator('.brand img').evaluate(img => {
         const box = img.getBoundingClientRect();
-        return img.complete && img.naturalWidth > 0 && Math.abs(box.width / box.height - 592 / 217) < .01;
+        return img.complete && img.naturalWidth > 0 && Math.abs(box.width / box.height - 900 / 330) < .01;
       }));
       const image = await page.screenshot({ fullPage: true });
       if (save) await fs.writeFile(path.join(output, `${name}.png`), image);
@@ -91,7 +91,7 @@ async function main() {
       for (const [index, selector] of ['.project-archive img', '.project-upcoming img'].entries()) {
         const locator = page.locator(selector);
         const box = await locator.boundingBox();
-        assert(box.width >= 200 && box.width <= 266 && Math.abs(box.width - box.height) < .01, `${name}: project artwork size/proportions`);
+        assert(box.width >= 190 && box.width <= 245 && Math.abs(box.width - box.height) < .01, `${name}: project artwork size/proportions`);
         assert(await locator.evaluate(img => img.complete && img.naturalWidth > 0 && getComputedStyle(img).clipPath === 'none' && getComputedStyle(img).filter === 'none'));
         const ink = colorFraction(png, box, index === 0 ? [152, 47, 34] : [226, 228, 232]);
         const background = colorFraction(png, box, index === 0 ? [233, 237, 227] : [37, 39, 43]);

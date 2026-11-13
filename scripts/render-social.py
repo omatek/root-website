@@ -45,7 +45,7 @@ def main():
     with tempfile.TemporaryDirectory(prefix="root-social-") as temporary:
         logo_path = Path(temporary) / "wordmark.png"
         subprocess.run(
-            [inkscape, str(ASSETS / "brand/root-lockup-dark-transparent.svg"),
+            [inkscape, str(ASSETS / "brand/root-barlow-lockup-dark-transparent.svg"),
              "--export-type=png", f"--export-width={210 * SCALE}",
              f"--export-filename={logo_path}"],
             check=True, capture_output=True,

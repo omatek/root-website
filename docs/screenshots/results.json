@@ -14,16 +14,16 @@
       },
       "projectPixels": [
         {
-          "width": 265.1875,
-          "height": 265.1875,
-          "inkFraction": 0.03710399449035812,
-          "backgroundFraction": 0.9335973370064279
+          "width": 244,
+          "height": 244,
+          "inkFraction": 0.03570464818187951,
+          "backgroundFraction": 0.9259427916076368
         },
         {
-          "width": 265.1875,
-          "height": 265.1875,
-          "inkFraction": 0.03710399449035812,
-          "backgroundFraction": 0.9370121671258035
+          "width": 244,
+          "height": 244,
+          "inkFraction": 0.03570464818187951,
+          "backgroundFraction": 0.9227551777642853
         }
       ],
       "axeViolations": 0,
@@ -42,16 +42,16 @@
       },
       "projectPixels": [
         {
-          "width": 233.625,
-          "height": 233.625,
-          "inkFraction": 0.036470719381688464,
-          "backgroundFraction": 0.9292694708680143
+          "width": 215.03125,
+          "height": 215.03125,
+          "inkFraction": 0.03487204122630797,
+          "backgroundFraction": 0.9223949689929252
         },
         {
-          "width": 233.625,
-          "height": 233.625,
-          "inkFraction": 0.036470719381688464,
-          "backgroundFraction": 0.9330967598097503
+          "width": 215.03125,
+          "height": 215.03125,
+          "inkFraction": 0.03487204122630797,
+          "backgroundFraction": 0.9264127871429819
         }
       ],
       "axeViolations": 0,
@@ -66,20 +66,20 @@
       },
       "document": {
         "width": 390,
-        "height": 1103
+        "height": 1039
       },
       "projectPixels": [
         {
-          "width": 210.59375,
-          "height": 210.59375,
-          "inkFraction": 0.03621315192743764,
-          "backgroundFraction": 0.9161451247165533
+          "width": 194,
+          "height": 194,
+          "inkFraction": 0.03656073971729196,
+          "backgroundFraction": 0.9122914231055372
         },
         {
-          "width": 210.59375,
-          "height": 210.59375,
-          "inkFraction": 0.036258503401360546,
-          "backgroundFraction": 0.9128571428571428
+          "width": 194,
+          "height": 194,
+          "inkFraction": 0.03675017360183751,
+          "backgroundFraction": 0.913439453020672
         }
       ],
       "axeViolations": 0,
@@ -98,16 +98,16 @@
       },
       "projectPixels": [
         {
-          "width": 222.296875,
-          "height": 222.296875,
-          "inkFraction": 0.036525212995801234,
-          "backgroundFraction": 0.9223635400105988
+          "width": 204,
+          "height": 204,
+          "inkFraction": 0.036221385105766446,
+          "backgroundFraction": 0.9179947841205448
         },
         {
-          "width": 222.296875,
-          "height": 222.296875,
-          "inkFraction": 0.036525212995801234,
-          "backgroundFraction": 0.9189393012922424
+          "width": 204,
+          "height": 204,
+          "inkFraction": 0.036221385105766446,
+          "backgroundFraction": 0.9143967932000386
         }
       ],
       "axeViolations": 0,
@@ -122,20 +122,20 @@
       },
       "document": {
         "width": 320,
-        "height": 1141
+        "height": 1078
       },
       "projectPixels": [
         {
-          "width": 210.59375,
-          "height": 210.59375,
-          "inkFraction": 0.03677375256322625,
-          "backgroundFraction": 0.922282980177717
+          "width": 194,
+          "height": 194,
+          "inkFraction": 0.03675017360183751,
+          "backgroundFraction": 0.9128518775706426
         },
         {
-          "width": 210.59375,
-          "height": 210.59375,
-          "inkFraction": 0.03659863945578231,
-          "backgroundFraction": 0.9182993197278911
+          "width": 194,
+          "height": 194,
+          "inkFraction": 0.03675017360183751,
+          "backgroundFraction": 0.9134928689706746
         }
       ],
       "axeViolations": 0,
@@ -148,7 +148,7 @@
   "archiveNavigation": "pass (intercepted test response)",
   "custom404": "pass",
   "approvedAssetHashes": {
-    "root-lockup-dark-transparent.svg": "412f76c2d80a5c61c9ad3fb3791261d4296800bf0f3324403a825bdb4ebee458",
+    "root-barlow-lockup-dark-transparent.svg": "d69d588a6d99d299634680b74aff1ed1294a4fcd1a423ba812d442d4980d6e01",
     "root-archive.svg": "f19b8443313a707f05125438cb0425d021cea5992b50d5196f4dab198b80f4f2",
     "root-competitions.svg": "7499c9db9d3c96a78cb58d2f11a92d27fa5cc5d4a29707c7de4aca6a6799ec13",
     "root.svg": "e9ae1f50351aad17c8a34743d0372ed02ea2228e5f11e9da6971ffe0c7cc97f8"
