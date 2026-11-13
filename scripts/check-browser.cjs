@@ -66,7 +66,7 @@ async function main() {
   let browser;
   const results = [];
   try {
-    browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || '/usr/bin/chromium', headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
+    browser = await chromium.launch({ executablePath: process.env.CHROMIUM_PATH || undefined, headless: true, args: ['--no-sandbox', '--disable-dev-shm-usage'] });
     for (const [name, width, height, save] of viewports) {
       const page = await browser.newPage({ viewport: { width, height }, deviceScaleFactor: 1 });
       const errors = [], externalRequests = [], failedResponses = [];
@@ -88,13 +88,13 @@ async function main() {
       if (save) await fs.writeFile(path.join(output, `${name}.png`), image);
       const png = PNG.sync.read(image);
       const projectPixels = [];
-      for (const [index, selector] of ['.project-archive img', '.project-upcoming img'].entries()) {
+      for (const [index, selector] of ['.project-archive img'].entries()) {
         const locator = page.locator(selector);
         const box = await locator.boundingBox();
         assert(box.width >= 190 && box.width <= 245 && Math.abs(box.width - box.height) < .01, `${name}: project artwork size/proportions`);
         assert(await locator.evaluate(img => img.complete && img.naturalWidth > 0 && getComputedStyle(img).clipPath === 'none' && getComputedStyle(img).filter === 'none'));
-        const ink = colorFraction(png, box, index === 0 ? [152, 47, 34] : [226, 228, 232]);
-        const background = colorFraction(png, box, index === 0 ? [233, 237, 227] : [37, 39, 43]);
+        const ink = colorFraction(png, box, [152, 47, 34]);
+        const background = colorFraction(png, box, [233, 237, 227]);
         assert(ink > .025 && ink < .09, `${name}: actual approved mark must be visible in screenshot (${ink})`);
         assert(background > .8, `${name}: approved logo background must be visible (${background})`);
         projectPixels.push({ width: box.width, height: box.height, inkFraction: ink, backgroundFraction: background });
@@ -114,10 +114,7 @@ async function main() {
 
     const page = await browser.newPage({ viewport: { width: 1366, height: 768 } });
     await page.goto(origin);
-    const future = page.locator('.project-upcoming');
-    assert.equal(await future.locator('a, button, [tabindex], [role="link"], [role="button"]').count(), 0);
-    assert.match(await future.textContent(), /Coming soon/);
-    const expectedTabs = ['#main', '#top', '#explore', '#connect', 'https://archive.rootamman.com', 'https://www.linkedin.com/company/rootamman/'];
+    const expectedTabs = ['#main', '#top', '#about', '#connect', 'https://archive.rootamman.com', 'https://www.linkedin.com/company/rootamman/'];
     for (const href of expectedTabs) {
       await page.keyboard.press('Tab');
       assert.equal(await page.evaluate(() => document.activeElement.getAttribute('href')), href, 'Keyboard tab sequence');
@@ -131,8 +128,6 @@ async function main() {
     assert.equal(await page.evaluate(() => document.activeElement.getAttribute('href')), 'https://archive.rootamman.com');
     await page.locator('.project-archive').hover();
     await page.waitForFunction(() => getComputedStyle(document.querySelector('.project-archive .project-art')).transform === 'matrix(1, 0, 0, 1, 0, -2)');
-    await future.hover();
-    assert.equal(await future.locator('.project-art').evaluate(el => getComputedStyle(el).transform), 'none');
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.locator('.project-archive').hover();
     assert.equal(await page.locator('.project-archive .project-art').evaluate(el => getComputedStyle(el).transform), 'none');

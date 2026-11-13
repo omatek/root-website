@@ -1,5 +1,5 @@
 {
-  "browser": "156.0.8078.79",
+  "browser": "151.0.7922.34",
   "axe": "4.14.0",
   "viewports": [
     {
@@ -16,14 +16,8 @@
         {
           "width": 244,
           "height": 244,
-          "inkFraction": 0.03570464818187951,
-          "backgroundFraction": 0.9259427916076368
-        },
-        {
-          "width": 244,
-          "height": 244,
-          "inkFraction": 0.03570464818187951,
-          "backgroundFraction": 0.9227551777642853
+          "inkFraction": 0.03572151386359037,
+          "backgroundFraction": 0.9223504014032248
         }
       ],
       "axeViolations": 0,
@@ -42,16 +36,10 @@
       },
       "projectPixels": [
         {
-          "width": 215.03125,
-          "height": 215.03125,
-          "inkFraction": 0.03487204122630797,
-          "backgroundFraction": 0.9223949689929252
-        },
-        {
-          "width": 215.03125,
-          "height": 215.03125,
-          "inkFraction": 0.03487204122630797,
-          "backgroundFraction": 0.9264127871429819
+          "width": 244,
+          "height": 244,
+          "inkFraction": 0.03570464818187951,
+          "backgroundFraction": 0.922316670039803
         }
       ],
       "axeViolations": 0,
@@ -66,20 +54,14 @@
       },
       "document": {
         "width": 390,
-        "height": 1039
+        "height": 844
       },
       "projectPixels": [
         {
-          "width": 194,
-          "height": 194,
-          "inkFraction": 0.03656073971729196,
-          "backgroundFraction": 0.9122914231055372
-        },
-        {
-          "width": 194,
-          "height": 194,
-          "inkFraction": 0.03675017360183751,
-          "backgroundFraction": 0.913439453020672
+          "width": 200,
+          "height": 200,
+          "inkFraction": 0.03738693467336683,
+          "backgroundFraction": 0.9154020100502512
         }
       ],
       "axeViolations": 0,
@@ -98,16 +80,10 @@
       },
       "projectPixels": [
         {
-          "width": 204,
-          "height": 204,
-          "inkFraction": 0.036221385105766446,
-          "backgroundFraction": 0.9179947841205448
-        },
-        {
-          "width": 204,
-          "height": 204,
-          "inkFraction": 0.036221385105766446,
-          "backgroundFraction": 0.9143967932000386
+          "width": 215.03125,
+          "height": 215.03125,
+          "inkFraction": 0.034829637641968635,
+          "backgroundFraction": 0.9166684694429421
         }
       ],
       "axeViolations": 0,
@@ -122,20 +98,14 @@
       },
       "document": {
         "width": 320,
-        "height": 1078
+        "height": 775
       },
       "projectPixels": [
         {
-          "width": 194,
-          "height": 194,
-          "inkFraction": 0.03675017360183751,
-          "backgroundFraction": 0.9128518775706426
-        },
-        {
-          "width": 194,
-          "height": 194,
-          "inkFraction": 0.03675017360183751,
-          "backgroundFraction": 0.9134928689706746
+          "width": 200,
+          "height": 200,
+          "inkFraction": 0.03738693467336683,
+          "backgroundFraction": 0.9154020100502512
         }
       ],
       "axeViolations": 0,
