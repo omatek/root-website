@@ -1,48 +1,64 @@
 <!--
-DRAFT — PENDING OWNER AND LEGAL APPROVAL. NOT FOR PUBLICATION.
-Prepared 14 November 2026. This file is outside site/ and is not published by the existing Cloudflare Pages site.
-Approval gates: confirm the responsible natural-person controller(s); review the legal basis and international transfers with Jordan's Personal Data Protection Unit or counsel; confirm Lark mailbox access, tenant region and retention/deletion capabilities; adopt and operationalize the proposed retention periods; test a clean browser session for injected scripts, cross-subdomain cookies and connections; and add a public privacy link with the real publication date.
-Lark privacy@rootamman.com can receive mail (confirmed by site owner).
-The retention periods below are proposals, NOT representations of a currently implemented retention practice.
-Do not merge, deploy, or distribute this document as an active notice until approval gates are resolved.
+EDITORIAL STATUS — DRAFT, NOT YET APPROVED OR PUBLISHED
+Prepared: 14 November 2026.
+Scope: rootamman.com only. This file is deliberately in docs/ (not the Pages site/ directory).
+
+OWNER APPROVAL BEFORE PUBLICATION:
+1. Adopt an operational correspondence-retention schedule and replace the criteria-only
+   wording below with the approved periods. Suggested: ordinary correspondence 6 months
+   after resolution; privacy requests 12 months after closure; copyright, security, and
+   dispute correspondence 24 months after closure, subject to lawful preservation needs.
+   THESE PERIODS ARE RECOMMENDATIONS, NOT CURRENTLY IMPLEMENTED FACTS.
+2. Review the applicable Jordanian lawful basis, cross-border-transfer obligations,
+   registration and DPO questions, and identify the responsible natural-person operator(s).
+3. Verify any required Lark settings/tenant location if available, and confirm current
+   browser-side behavior and cross-subdomain cookie scope before publishing.
+4. Set the actual publication date and add a public footer link only after approval.
+Current evidence: Cloudflare Web Analytics ruleset disabled; Pages analytics fields empty;
+no manual trackers in site source; Lark MX records verified; site owner confirmed mailbox
+receipt and that only one root organizer currently accesses email.
 -->
 
 # Privacy Notice
 
-*Effective date: [insert actual publication date after approval]*
+_Last updated: 14 November 2026_
 
-This notice covers **[rootamman.com](https://rootamman.com)**, the informational homepage of **root**, an independent, unincorporated, student-led technology community based in Jordan. root is not operated, sponsored, or officially affiliated with any university or educational institution unless explicitly stated otherwise. The organizers responsible for operating this website and its correspondence can be contacted at **[privacy@rootamman.com](mailto:privacy@rootamman.com)**.
+This notice applies to [rootamman.com](https://rootamman.com), the informational website of **root**, an independent, unincorporated, student-led technology community based in Jordan. root is not operated, sponsored, or officially affiliated with any university or educational institution unless explicitly stated otherwise.
 
-This notice does **not** cover **root/archive**, which is a separate service with different processing activities and requires its own privacy notice.
+You can contact the organizers responsible for the website and its correspondence at [privacy@rootamman.com](mailto:privacy@rootamman.com). This notice covers the root homepage only. **root/archive** is a separate service with different data-processing activities and requires its own notice.
 
-## When you visit
+## When you visit our website
 
-You can browse our homepage without an account, contact form, or user upload.
+You can browse without creating an account or submitting information through a form. The homepage does not accept user uploads.
 
-We use **Cloudflare** to host, deliver, and protect the website. Processing begins when your browser requests the site. Technical request information can include your IP address, pages requested, request time, browser or device information, and security signals. Cloudflare uses this information for site delivery, reliability, troubleshooting, abuse prevention, and operational or security reporting.
+When your browser requests a page, **Cloudflare** processes technical request information to host, deliver, and protect the website. This may include your IP address, requested pages, request times, browser or device information, and security signals. The purposes are website delivery, reliability, troubleshooting, and preventing abuse.
 
-We do not use Cloudflare Web Analytics, advertising trackers, behavioral profiling, or visitor analytics scripts on this homepage. Cloudflare may set security cookies when particular protective features or challenges apply; we do not intentionally set advertising or account-login cookies.
+We have disabled **Cloudflare Web Analytics** and do not intentionally use advertising trackers, visitor analytics scripts, or behavioral profiling on this homepage. Cloudflare may still generate operational and security-related information from the traffic it handles. We do not use advertising or login cookies; Cloudflare may set security cookies if protective features or challenges are activated.
 
 ## When you email us
 
-Processing begins when your email arrives. We use your email address, message, headers, and any attachments to reply and manage the matter, including privacy requests, copyright complaints, or disputes if relevant. We use **Lark Mail**, provided by **Lark Technologies Pte. Ltd.**, for organizational correspondence. Please do not send sensitive personal information unless necessary.
+When your message reaches us, we process your email address, message, relevant email metadata, and any attachments to respond and manage necessary follow-up. This includes handling privacy inquiries, complaints, or disputes where relevant.
 
-## Providers, international processing, security, and retention
+Our organizational email is provided by **Lark Mail (Lark Technologies Pte. Ltd.)**. Within root, access to the organizational inbox is currently limited to one authorized organizer. Please avoid sending sensitive personal information unless necessary.
 
-Cloudflare processes technical website information through its global infrastructure; some processing may take place outside Jordan. Lark may store or access correspondence outside Jordan. We have not determined the specific data-residency region assigned to our Lark workspace. We do not use correspondence or website traffic for advertising or profiling. We may disclose information when legally required.
+## Providers, international processing, retention, and security
 
-We do not maintain a separate visitor-account database or export website traffic through Cloudflare Logpush. Cloudflare retains operational and security information under the applicable service arrangements and settings, which can differ from our own retention decisions.
+Cloudflare processes website requests through its international network, so technical data may be processed outside Jordan. Lark also uses international infrastructure and may process or store correspondence outside Jordan. More information is available in [Cloudflare's Privacy Policy](https://www.cloudflare.com/privacypolicy/) and [Lark's Privacy Policy](https://www.larksuite.com/privacy-policy). Their published policies do not establish the exact region assigned to root's Lark workspace.
 
-**Proposed email retention periods (subject to owner approval and operational implementation):** ordinary inquiries up to **six months after resolution**; privacy-rights requests up to **12 months after closure**; and copyright complaints, security incidents, and disputes up to **24 months after closure**. Particular correspondence may be retained longer where required by law or necessary in connection with an actual legal claim, and should then be reviewed and deleted when no longer needed. These periods do not purport to control Lark's backups or provider-level retention.
+We do not maintain our own visitor-account database or export request logs using Cloudflare Logpush. Cloudflare's retention of operational and security records is governed by its services and applicable settings.
 
-The website is delivered over HTTPS and uses Cloudflare security services. Lark provides hosted-mail security safeguards. No online service can guarantee absolute security.
+We keep email correspondence for the period necessary to handle the inquiry and reasonable follow-up. Privacy requests, copyright complaints, or disputes may require longer retention to handle the matter or meet applicable legal obligations. Correspondence should be deleted or anonymized when it is no longer needed, subject to legally required preservation and any applicable provider-level retention or recovery periods.
+
+The homepage uses HTTPS and Cloudflare's website protection services. Within root, organizational email access is limited as described above; Lark also describes its own technical and organizational safeguards. No online service can guarantee absolute security.
 
 ## Your rights and questions
 
-Subject to the conditions of Jordan's **Personal Data Protection Law No. 24 of 2023**, you may ask to know about, access, and obtain your personal data; correct, amend, add to, or update it; limit processing to a specific scope; request erasure or concealment; object to unnecessary, excessive, unfair, discriminatory, or unlawful processing or profiling; and request transfer of a copy as provided by law. You may withdraw prior consent where applicable, and you have the right to be informed of a breach affecting your data in accordance with the law.
+Under Jordan's **Personal Data Protection Law No. 24 of 2023**, subject to its conditions and exceptions, you have rights to know about, access, and obtain your personal data; correct, amend, add to, or update it; limit processing to a specific scope; request erasure or concealment; object to unnecessary, excessive, discriminatory, unfair, or unlawful processing or profiling; and request transfer of a copy of your data as provided by law. You may withdraw prior consent where applicable and be notified of security breaches affecting your data in accordance with the law.
 
-Email **[privacy@rootamman.com](mailto:privacy@rootamman.com)** to ask questions or exercise your rights. We may need to verify your identity before acting on a request. You may contact Jordan's **Personal Data Protection Unit (Directorate)** at the **Ministry of Digital Economy and Entrepreneurship** at **[PDP@modee.gov.jo](mailto:PDP@modee.gov.jo)** or via the Ministry's [dedicated contact page](https://www.modee.gov.jo/EN/Pages/Contact_Us_pdp_En).
+To exercise your rights or raise a privacy concern, email [privacy@rootamman.com](mailto:privacy@rootamman.com). We may need to verify your identity before acting on a request.
 
-## External links and updates
+You may also contact Jordan's **Personal Data Protection Unit (Directorate)** at the **Ministry of Digital Economy and Entrepreneurship** through [PDP@modee.gov.jo](mailto:PDP@modee.gov.jo) or the [Ministry's data-protection contact page](https://www.modee.gov.jo/EN/Pages/Contact_Us_pdp_En).
 
-Our website links to external services, including Instagram and LinkedIn. Their own privacy notices apply when you leave this website. We will update this notice and its effective date if our practices change.
+## External links and changes
+
+The homepage links to external services, including Instagram and LinkedIn. Their privacy practices apply when you visit them. We may update this notice if our website or data-processing practices change and will update the date above.
