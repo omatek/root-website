@@ -26,9 +26,9 @@ The reproducible `scripts/check-browser.cjs` check passed for all five sizes:
 actual logo foreground/background pixels, approved asset fingerprints and
 proportions, font loading, no horizontal overflow, no console errors, no failed
 assets, and no third-party page requests. Axe reports zero WCAG 2 A/AA, 2.1 AA,
-and 2.2 AA violations. Keyboard order, visible focus, skip-to-main, archive
-hover/focus and navigation, reduced motion, and the custom 404 pass. Navigation
-uses an intercepted response and does not establish remote archive availability.
+and 2.2 AA violations. Keyboard order, visible focus, skip-to-main, noninteractive
+archive showcase with Coming soon status, Instagram and LinkedIn links, reduced
+motion, and the custom 404 pass.
 
 Commands:
 

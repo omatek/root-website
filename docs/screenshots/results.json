@@ -16,8 +16,8 @@
         {
           "width": 244,
           "height": 244,
-          "inkFraction": 0.03572151386359037,
-          "backgroundFraction": 0.9223504014032248
+          "inkFraction": 0.03570464818187951,
+          "backgroundFraction": 0.9257235377453956
         }
       ],
       "axeViolations": 0,
@@ -39,7 +39,7 @@
           "width": 244,
           "height": 244,
           "inkFraction": 0.03570464818187951,
-          "backgroundFraction": 0.922316670039803
+          "backgroundFraction": 0.9257066720636848
         }
       ],
       "axeViolations": 0,
@@ -82,8 +82,8 @@
         {
           "width": 215.03125,
           "height": 215.03125,
-          "inkFraction": 0.034829637641968635,
-          "backgroundFraction": 0.9166684694429421
+          "inkFraction": 0.0349923929580526,
+          "backgroundFraction": 0.9172136492066942
         }
       ],
       "axeViolations": 0,
@@ -98,7 +98,7 @@
       },
       "document": {
         "width": 320,
-        "height": 775
+        "height": 840
       },
       "projectPixels": [
         {
@@ -114,8 +114,8 @@
     }
   ],
   "keyboard": "pass",
+  "noninteractiveArchive": "pass",
   "reducedMotion": "pass",
-  "archiveNavigation": "pass (intercepted test response)",
   "custom404": "pass",
   "approvedAssetHashes": {
     "root-barlow-lockup-dark-transparent.svg": "d69d588a6d99d299634680b74aff1ed1294a4fcd1a423ba812d442d4980d6e01",

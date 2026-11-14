@@ -55,29 +55,28 @@ automatically. Use an anchor only when a project has a real destination. Use a
 noninteractive article for upcoming initiatives. Each item has a logo, name,
 description, and optional status. No scripting is needed.
 
-The archive link intentionally points to `https://archive.rootamman.com` while
-its label says “Preparing for public launch.” Competitions is an article with
-no link, button role, or tab stop. The only social link is the supplied LinkedIn
-page. No contact email was supplied, so none is shown. Update the copyright
-year in the HTML when needed.
+The archive showcase is noninteractive with an "In development · Coming soon"
+status while the project prepares for public announcement. It contains no link,
+button role, or tab stop. The community links connect to official Instagram and
+LinkedIn destinations. No contact email was supplied, so none is shown. Update
+the copyright year in the HTML when needed.
 
 ## Brand provenance
 
-The root lockups, parent symbol, and two project SVGs are supplied attachments,
-preserved byte for byte. Only archive and competitions appear in the launcher.
+The root lockups, parent symbol, and project SVGs are supplied attachments,
+preserved byte for byte.
 
-Archive uses the approved `#982F22` mark on `#E9EDE3`; competitions uses
-`#E2E4E8` on `#25272B`. The complete square SVGs are displayed directly as
-standalone artwork, including their approved backgrounds. The logo images
-have no reconstructed paths, clipping contours, masks, filters, color changes,
-opacity changes, or perspective distortion. CSS rounds only the background
-surface corners and adds a restrained perimeter highlight and shallow shadow.
-Names, descriptions, and statuses sit beneath the artwork, outside its surface.
-Competitions has a quieter perimeter treatment and an explicit upcoming status.
+Archive uses the approved `#982F22` mark on `#E9EDE3`. The complete square SVG
+is displayed directly as standalone artwork, including its approved background.
+The logo image has no reconstructed paths, clipping contours, masks, filters,
+color changes, opacity changes, or perspective distortion. CSS rounds only the
+background surface corners and adds a restrained perimeter highlight and
+shallow shadow. Name, description, and status sit beneath the artwork, outside
+its surface.
 
-The header uses `root-barlow-lockup-dark-transparent.svg`; the launcher uses
-`root-archive.svg` and `root-competitions.svg`; the favicon uses `root.svg`.
-SHA-256 fingerprints of these approved files are recorded in the browser check.
+The header uses `root-barlow-lockup-dark-transparent.svg`; the featured project
+uses `root-archive.svg`; the favicon uses `root.svg`. SHA-256 fingerprints of
+these approved files are recorded in the browser check.
 
 Manrope is the Latin variable WOFF2 subset from
 `@fontsource-variable/manrope@5.3.0`, distributed under the included SIL Open
@@ -104,5 +103,5 @@ the site's security headers, tests five viewport sizes, and saves the requested
 1440 × 900, 1366 × 768, and 390 × 844 screenshots. It checks actual foreground
 and background pixels in the rendered logos, rather than treating a successful
 image load as proof that the artwork is visible. It also checks keyboard order,
-the skip link, focus, hover, reduced motion, archive navigation with an intercepted
-response, the custom 404, and axe WCAG accessibility rules.
+the skip link, focus, reduced motion, noninteractive archive showcase,
+the custom 404, and axe WCAG accessibility rules.
