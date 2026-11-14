@@ -98,7 +98,7 @@
       },
       "document": {
         "width": 320,
-        "height": 840
+        "height": 861
       },
       "projectPixels": [
         {
@@ -115,6 +115,7 @@
   ],
   "keyboard": "pass",
   "noninteractiveArchive": "pass",
+  "privacyPage": "pass",
   "reducedMotion": "pass",
   "custom404": "pass",
   "approvedAssetHashes": {
