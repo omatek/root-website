@@ -114,7 +114,12 @@ async function main() {
 
     const page = await browser.newPage({ viewport: { width: 1366, height: 768 } });
     await page.goto(origin);
-    const expectedTabs = ['#main', '#top', '#about', '#connect', 'https://archive.rootamman.com', 'https://www.linkedin.com/company/rootamman/'];
+    const archive = page.locator('.project-archive');
+    assert.equal(await archive.locator('a, button, [tabindex], [role="link"], [role="button"]').count(), 0, 'Archive must be noninteractive');
+    assert.match(await archive.textContent(), /Coming soon/);
+    assert.equal(await archive.evaluate(el => getComputedStyle(el).cursor), 'auto');
+
+    const expectedTabs = ['#main', '#top', '#about', '#connect', 'https://www.instagram.com/rootamman/', 'https://www.linkedin.com/company/rootamman/', 'privacy.html'];
     for (const href of expectedTabs) {
       await page.keyboard.press('Tab');
       assert.equal(await page.evaluate(() => document.activeElement.getAttribute('href')), href, 'Keyboard tab sequence');
@@ -125,22 +130,24 @@ async function main() {
     await page.keyboard.press('Enter');
     assert.equal(await page.evaluate(() => document.activeElement.id), 'main', 'Skip link must focus main');
     await page.keyboard.press('Tab');
-    assert.equal(await page.evaluate(() => document.activeElement.getAttribute('href')), 'https://archive.rootamman.com');
-    await page.locator('.project-archive').hover();
-    await page.waitForFunction(() => getComputedStyle(document.querySelector('.project-archive .project-art')).transform === 'matrix(1, 0, 0, 1, 0, -2)');
+    assert.equal(await page.evaluate(() => document.activeElement.getAttribute('href')), 'https://www.instagram.com/rootamman/');
+    await archive.hover();
+    assert.equal(await archive.locator('.project-art').evaluate(el => getComputedStyle(el).transform), 'none');
     await page.emulateMedia({ reducedMotion: 'reduce' });
-    await page.locator('.project-archive').hover();
-    assert.equal(await page.locator('.project-archive .project-art').evaluate(el => getComputedStyle(el).transform), 'none');
     assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto');
-    assert.equal(await page.locator('.project-art').first().evaluate(el => getComputedStyle(el).transitionDuration), '0s');
-    await page.route('https://archive.rootamman.com/**', route => route.fulfill({ status: 200, contentType: 'text/plain', body: 'Navigation test stub' }));
-    await page.locator('.project-archive img').click();
-    await page.waitForURL('https://archive.rootamman.com/');
+    assert.equal((await page.goto(origin + '/privacy.html')).status(), 200);
+    assert.equal(await page.title(), 'Privacy Notice — root');
+    await page.evaluate(axe.source);
+    const privacyAxe = await page.evaluate(async () => {
+      const result = await axe.run(document, { runOnly: { type: 'tag', values: ['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'] } });
+      return result.violations.map(({ id, impact, nodes }) => ({ id, impact, elements: nodes.map(node => node.target) }));
+    });
+    assert.deepEqual(privacyAxe, [], 'privacy page axe violations');
     assert.equal((await page.goto(origin + '/missing-page')).status(), 404);
     assert.equal(await page.title(), 'Page not found — root');
     await page.close();
-    await fs.writeFile(path.join(output, 'results.json'), JSON.stringify({ browser: await browser.version(), axe: axe.version, viewports: results, keyboard: 'pass', reducedMotion: 'pass', archiveNavigation: 'pass (intercepted test response)', custom404: 'pass', approvedAssetHashes: approved }, null, 2) + '\n');
-    console.log(JSON.stringify({ passed: results.map(result => result.name), axeViolations: 0, keyboard: 'pass', hover: 'pass', reducedMotion: 'pass', actualLogoPixels: 'pass', assetIntegrity: 'pass', custom404: 'pass' }, null, 2));
+    await fs.writeFile(path.join(output, 'results.json'), JSON.stringify({ browser: await browser.version(), axe: axe.version, viewports: results, keyboard: 'pass', noninteractiveArchive: 'pass', privacyPage: 'pass', reducedMotion: 'pass', custom404: 'pass', approvedAssetHashes: approved }, null, 2) + '\n');
+    console.log(JSON.stringify({ passed: results.map(result => result.name), axeViolations: 0, keyboard: 'pass', noninteractiveArchive: 'pass', privacyPage: 'pass', reducedMotion: 'pass', actualLogoPixels: 'pass', assetIntegrity: 'pass', custom404: 'pass' }, null, 2));
   } finally {
     if (browser) await browser.close();
     await new Promise(resolve => server.close(resolve));
