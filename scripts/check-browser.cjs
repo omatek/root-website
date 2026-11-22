@@ -115,11 +115,13 @@ async function main() {
     const page = await browser.newPage({ viewport: { width: 1366, height: 768 } });
     await page.goto(origin);
     const archive = page.locator('.project-archive');
-    assert.equal(await archive.locator('a, button, [tabindex], [role="link"], [role="button"]').count(), 0, 'Archive must be noninteractive');
-    assert.match(await archive.textContent(), /Coming soon/);
-    assert.equal(await archive.evaluate(el => getComputedStyle(el).cursor), 'auto');
+    assert.equal(await archive.evaluate(el => el.tagName), 'A', 'The entire archive card must be a link');
+    assert.equal(await archive.getAttribute('href'), 'https://archive.rootamman.com/');
+    assert.equal(await archive.locator('a, button, [tabindex], [role="link"], [role="button"]').count(), 0, 'No nested interactive elements');
+    assert.doesNotMatch(await archive.textContent(), /Coming soon|In development/);
+    assert.equal(await archive.evaluate(el => getComputedStyle(el).cursor), 'pointer');
 
-    const expectedTabs = ['#main', '#top', '#about', '#connect', 'https://www.instagram.com/rootamman/', 'https://www.linkedin.com/company/rootamman/', 'privacy.html'];
+    const expectedTabs = ['#main', '#top', 'https://archive.rootamman.com/', 'https://www.instagram.com/rootamman/', 'https://www.linkedin.com/company/rootamman/', 'privacy.html'];
     for (const href of expectedTabs) {
       await page.keyboard.press('Tab');
       assert.equal(await page.evaluate(() => document.activeElement.getAttribute('href')), href, 'Keyboard tab sequence');
@@ -130,9 +132,10 @@ async function main() {
     await page.keyboard.press('Enter');
     assert.equal(await page.evaluate(() => document.activeElement.id), 'main', 'Skip link must focus main');
     await page.keyboard.press('Tab');
-    assert.equal(await page.evaluate(() => document.activeElement.getAttribute('href')), 'https://www.instagram.com/rootamman/');
+    assert.equal(await page.evaluate(() => document.activeElement.getAttribute('href')), 'https://archive.rootamman.com/');
     await archive.hover();
-    assert.equal(await archive.locator('.project-art').evaluate(el => getComputedStyle(el).transform), 'none');
+    await page.waitForTimeout(260);
+    assert.notEqual(await archive.locator('.project-art').evaluate(el => getComputedStyle(el).transform), 'none');
     await page.emulateMedia({ reducedMotion: 'reduce' });
     assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto');
     assert.equal((await page.goto(origin + '/privacy.html')).status(), 200);
@@ -146,8 +149,8 @@ async function main() {
     assert.equal((await page.goto(origin + '/missing-page')).status(), 404);
     assert.equal(await page.title(), 'Page not found — root');
     await page.close();
-    await fs.writeFile(path.join(output, 'results.json'), JSON.stringify({ browser: await browser.version(), axe: axe.version, viewports: results, keyboard: 'pass', noninteractiveArchive: 'pass', privacyPage: 'pass', reducedMotion: 'pass', custom404: 'pass', approvedAssetHashes: approved }, null, 2) + '\n');
-    console.log(JSON.stringify({ passed: results.map(result => result.name), axeViolations: 0, keyboard: 'pass', noninteractiveArchive: 'pass', privacyPage: 'pass', reducedMotion: 'pass', actualLogoPixels: 'pass', assetIntegrity: 'pass', custom404: 'pass' }, null, 2));
+    await fs.writeFile(path.join(output, 'results.json'), JSON.stringify({ browser: await browser.version(), axe: axe.version, viewports: results, keyboard: 'pass', interactiveArchive: 'pass', privacyPage: 'pass', reducedMotion: 'pass', custom404: 'pass', approvedAssetHashes: approved }, null, 2) + '\n');
+    console.log(JSON.stringify({ passed: results.map(result => result.name), axeViolations: 0, keyboard: 'pass', interactiveArchive: 'pass', privacyPage: 'pass', reducedMotion: 'pass', actualLogoPixels: 'pass', assetIntegrity: 'pass', custom404: 'pass' }, null, 2));
   } finally {
     if (browser) await browser.close();
     await new Promise(resolve => server.close(resolve));
