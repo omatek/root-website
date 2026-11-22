@@ -55,10 +55,10 @@ automatically. Use an anchor only when a project has a real destination. Use a
 noninteractive article for upcoming initiatives. Each item has a logo, name,
 description, and optional status. No scripting is needed.
 
-The archive showcase is noninteractive with an "In development · Coming soon"
-status while the project prepares for public announcement. It contains no link,
-button role, or tab stop. The community links connect to official Instagram and
-LinkedIn destinations. No contact email was supplied, so none is shown. Update
+The root/archive project card links to the live archive at
+https://archive.rootamman.com/. The entire logo-and-title card is one accessible
+link, without launch-placeholder copy. The community links connect to official
+Instagram and LinkedIn destinations. No contact email was supplied, so none is shown. Update
 the copyright year in the HTML when needed.
 
 ## Brand provenance
@@ -103,5 +103,5 @@ the site's security headers, tests five viewport sizes, and saves the requested
 1440 × 900, 1366 × 768, and 390 × 844 screenshots. It checks actual foreground
 and background pixels in the rendered logos, rather than treating a successful
 image load as proof that the artwork is visible. It also checks keyboard order,
-the skip link, focus, reduced motion, noninteractive archive showcase,
+the skip link, focus, reduced motion, interactive archive showcase,
 the custom 404, and axe WCAG accessibility rules.
